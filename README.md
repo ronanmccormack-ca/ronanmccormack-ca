@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ronanmccormack-ca
 - 👀 Keep your eyes peeled for some interesting projects coming up!
-- 🌱 I’m currently learning Data Science at IT Sligo.
+- 🌱 I’m currently studying my Masters in Data Science at the Institute of Technology Sligo.
 - 📫 How to reach me: S00144576@mail.itsligo.ie.
 
 <!---
