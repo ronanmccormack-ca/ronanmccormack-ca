@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @ronanmccormack-ca
+- 👋 Hi, I’m Ronan!
 - 👀 Keep your eyes peeled for some interesting projects coming up!
-- 🌱 I’m currently studying my Masters in Data Science at the Institute of Technology Sligo.
-- 📫 How to reach me: S00144576@atu.ie.
+- 🌱 Currently finishing my Masters in Data Science from the Atlantic Technology University Sligo.
+- 📫 How to reach me: S00144576@atu.ie or ronanmccormack95@gmail.com.
 
 <!---
 ronanmccormack-ca/ronanmccormack-ca is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
