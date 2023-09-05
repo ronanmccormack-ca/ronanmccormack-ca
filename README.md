@@ -1,6 +1,7 @@
 - 👋 Hi, I’m Ronan!
 - 👀 Keep your eyes peeled for some interesting projects coming up!
 - 🌱 Completed my Masters in Data Science from the Atlantic Technology University Sligo.
+- 📊 Owner: datahouse.ca | info@datahouse.ca
 - 📫 How to reach me: info@ronanmccormack.ca
 
 <!---
