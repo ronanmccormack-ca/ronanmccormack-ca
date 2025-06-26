@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronan Mc Cormack - Senior Analytics Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a365d;
+            background-color: #f7fafc;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .info-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+        }
+
+        .location {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 500px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 0;
+        }
+
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+            opacity: 0.8;
+            flex-shrink: 0;
+        }
+
+        .contact-item a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: #4299e1;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            margin: -30px 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            padding: 50px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #4299e1;
+            border-radius: 2px;
+        }
+
+        /* Executive Summary */
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+            max-width: none;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-group {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.2s ease;
+        }
+
+        .skill-group:hover {
+            border-color: #4299e1;
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.1);
+        }
+
+        .skill-group h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid #cbd5e0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: #4299e1;
+            background: #ebf8ff;
+            color: #2b6cb0;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            border-color: #4299e1;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #4299e1, #2b6cb0);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        .tech-badge {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid #bee3f8;
+        }
+
+        .project-metrics {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #38a169;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience-list {
+            space-y: 30px;
+        }
+
+        .experience-item {
+            border-left: 3px solid #e2e8f0;
+            padding-left: 25px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #4299e1;
+            border-radius: 50%;
+        }
+
+        .experience-header {
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4299e1;
+            margin-bottom: 4px;
+        }
+
+        .job-duration {
+            font-size: 0.9rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .job-description {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.2s ease;
+        }
+
+        .education-card:hover {
+            border-color: #4299e1;
+            box-shadow: 0 4px 12px rgba(66, 153, 225, 0.1);
+        }
+
+        .degree-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
+        }
+
+        .institution {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #4299e1;
+            margin-bottom: 4px;
+        }
+
+        .graduation-year {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 12px;
+        }
+
+        .education-details {
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .cta-button.primary {
+            background: #4299e1;
+            border-color: #4299e1;
+        }
+
+        .cta-button.primary:hover {
+            background: #3182ce;
+            border-color: #3182ce;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .contact-info {
+                margin: 0 auto;
+            }
+
+            .section {
+                padding: 30px 25px;
+            }
+
+            .main-content {
+                margin: -20px 10px 0;
+            }
+
+            .info-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Professional animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-img">
+                        <img src="images/Ronan-McCormack.png" alt="Ronan McCormack Profile Photo">
+                    </div>
+                </div>
+                <div class="info-section">
+                    <h1>Ronan Mc Cormack, MSc</h1>
+                    <div class="title">Senior Analytics & Data Science Professional</div>
+                    <div class="location">
+                        <span class="contact-icon">📍</span>
+                        Vancouver, British Columbia, Canada
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:ronanmccormack@live.com">ronanmccormack@live.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <a href="https://linkedin.com/in/ronan-mccormack/" target="_blank">linkedin.com/in/ronan-mccormack/</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <span>Available for Contract/FTE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Executive Summary -->
+            <section class="section">
+                <h2 class="section-title">Executive Summary</h2>
+                <p class="summary">
+                    Data-driven Senior Analytics Professional with 10 years of experience transforming complex datasets into actionable business insights. Proven expertise in statistical modeling, predictive analytics, and data visualization, with a track record of delivering measurable impact for public and private organizations. Specializes in Python, R, SQL, and advanced analytics platforms, with deep experience in governance frameworks, asset management optimization, and executive reporting for data-driven decision making.
+                </p>
+            </section>
+
+            <!-- Core Technical Competencies -->
+            <section class="section">
+                <h2 class="section-title">Analytics & Data Science Expertise</h2>
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3>
+                            <span>📊</span>
+                            Statistical Analysis & Modeling
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">Statistical Modeling</span>
+                            <span class="skill-tag">Predictive Analytics</span>
+                            <span class="skill-tag">Time Series Analysis</span>
+                            <span class="skill-tag">Regression Analysis</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>
+                            <span>🔍</span>
+                            Data Management & ETL
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Oracle</span>
+                            <span class="skill-tag">Data Warehousing</span>
+                            <span class="skill-tag">ETL Pipelines</span>
+                            <span class="skill-tag">Data Quality</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>
+                            <span>📈</span>
+                            Visualization & BI Tools
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">ggplot2</span>
+                            <span class="skill-tag">Plotly</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>
+                            <span>🤖</span>
+                            Machine Learning & AI
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Classification</span>
+                            <span class="skill-tag">Clustering</span>
+                            <span class="skill-tag">Neural Networks</span>
+                            <span class="skill-tag">Feature Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Analytics Projects -->
+            <section class="section">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 class="project-title">Professional IT Support Website Build</h3>
+                        <p class="project-description">
+                            Developed comprehensive asset management analytics platform for BC's regional transportation authority, analyzing performance patterns across 1,800+ buses and infrastructure assets. Created predictive maintenance models that reduced unplanned downtime by 32% and optimized replacement scheduling.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊</span>
+                            80% Annual Savings
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">IT Governance Dashboard & KPI Framework</h3>
+                        <p class="project-description">
+                            Built executive-level IT governance reporting system tracking 45+ KPIs across IT operations, Cybersecurity, and IT Project Delivery. Automated monthly executive reports and implemented real-time monitoring dashboards that improved decision-making speed by 60%.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Power Apps</span>
+                            <span class="tech-badge">Executive Reporting</span>
+                            <span class="tech-badge">KPI Development</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊</span>
+                            45+ KPIs • 60% Faster Decision Making
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">Vancouver Property Assessment Analytics</h3>
+                        <p class="project-description">
+                            Engineered comprehensive property valuation analysis system using City of Vancouver open data, processing 250K+ property records. Developed interactive web application with predictive pricing models achieving 94% accuracy for residential properties.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">Machine Learning</span>
+                            <span class="tech-badge">Data Visualization</span>
+                            <span class="tech-badge">Web Development</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊</span>
+                            250K+ Records • 94% Prediction Accuracy
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-title">Healthcare System Performance Analytics</h3>
+                        <p class="project-description">
+                            Analyzed patient flow and resource utilization patterns across BC healthcare facilities using statistical modeling and operational research techniques. Identified bottlenecks that improved patient throughput by 28% and reduced average wait times.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">R</span>
+                            <span class="tech-badge">Statistical Analysis</span>
+                            <span class="tech-badge">Healthcare Analytics</span>
+                            <span class="tech-badge">Operations Research</span>
+                            <span class="tech-badge">Process Optimization</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span>📊</span>
+                            28% Throughput Improvement • Government Contract
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="degree-title">Master of Science in Data Science</div>
+                        <div class="institution">Atlantic Technological University, Sligo</div>
+                        <div class="graduation-year">2023</div>
+                        <div class="education-details">
+                            Specialized in advanced statistical computing, machine learning algorithms, and data mining techniques. Completed thesis on predictive analytics applications in transportation systems. Dean's List recognition for academic excellence.
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="degree-title">Bachelor of Science in Computer Systems & Networking</div>
+                        <div class="institution">Institute of Technology, Galway</div>
+                        <div class="graduation-year">2017</div>
+                        <div class="education-details">
+                            Comprehensive foundation in computer science, systems administration, and network infrastructure. Strong emphasis on database design, programming fundamentals, and system optimization. Graduated with honors.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">IT Governance & Reporting Specialist</div>
+                            <div class="company-name">TransLink • New Westminster, BC</div>
+                            <div class="job-duration">September 2023 - Present</div>
+                        </div>
+                        <div class="job-description">
+                            Leading enterprise analytics and governance reporting initiatives for BC's regional transportation authority. Developing executive dashboards, KPI frameworks, and predictive models for asset management. Managing analytics projects worth $3M+ annually while ensuring compliance with government reporting standards and data governance policies.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">IT Asset Management Specialist</div>
+                            <div class="company-name">TransLink • New Westminster, BC</div>
+                            <div class="job-duration">May 2022 - September 2023</div>
+                        </div>
+                        <div class="job-description">
+                            Specialized in analytics-driven asset management optimization for transportation infrastructure. Built predictive maintenance models, conducted lifecycle analysis, and created performance benchmarking systems. Delivered data insights that improved asset utilization by 35% and reduced maintenance costs by $1.8M annually.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">IT Administrator & Data Analyst</div>
+                            <div class="company-name">TransLink • New Westminster, BC</div>
+                            <div class="job-duration">November 2020 - May 2022</div>
+                        </div>
+                        <div class="job-description">
+                            Managed enterprise data systems while developing analytical capabilities for operational decision-making. Created automated reporting solutions, performed statistical analysis of system performance metrics, and built data quality monitoring frameworks. Established foundation for organization-wide analytics initiatives.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">Computer Support Analyst</div>
+                            <div class="company-name">TransLink • New Westminster, BC</div>
+                            <div class="job-duration">November 2019 - November 2020</div>
+                        </div>
+                        <div class="job-description">
+                            Provided technical support while developing expertise in data analysis and system performance monitoring. Analyzed help desk metrics, created performance dashboards, and identified patterns in technical issues to improve service delivery efficiency by 25%.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">Technical Support Specialist</div>
+                            <div class="company-name">Quicktech • Vancouver, BC</div>
+                            <div class="job-duration">May 2018 - November 2019</div>
+                        </div>
+                        <div class="job-description">
+                            Delivered technical support services while building foundational analytics skills. Analyzed customer data patterns, created service quality metrics, and developed reporting systems that improved client satisfaction scores by 20% across multiple SME clients.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">Systems Engineer</div>
+                            <div class="company-name">CBE Ltd • Mayo, Ireland</div>
+                            <div class="job-duration">May 2017 - May 2018</div>
+                        </div>
+                        <div class="job-description">
+                            Engineered system solutions for enterprise clients while developing data analysis capabilities. Conducted performance analysis of network infrastructure, created monitoring dashboards, and implemented data-driven optimization strategies that improved system reliability by 30%.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="job-title">Systems Administrator</div>
+                            <div class="company-name">Rocket Science Ltd • Sligo, Ireland</div>
+                            <div class="job-duration">November 2015 - May 2017</div>
+                        </div>
+                        <div class="job-description">
+                            Managed enterprise systems infrastructure while developing analytical approaches to operational challenges. Created automated monitoring solutions, analyzed system performance data, and established metrics-driven maintenance schedules that reduced downtime by 40% for client environments.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2>Ready to Transform Your Data into Insights</h2>
+                <p>
+                    Available for analytics consulting, data science projects, and strategic advisory roles across Vancouver and remotely throughout North America.
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:ronanmccormack@live.com" class="cta-button primary">
+                        <span>📧</span>
+                        Get In Touch
+                    </a>
+                    <a href="https://linkedin.com/in/ronan-mccormack" class="cta-button" target="_blank">
+                        <span>💼</span>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Professional, subtle interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for subtle animations
+            document.querySelectorAll('.section, .project-card, .education-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for any anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add subtle hover effects to skill tags
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
