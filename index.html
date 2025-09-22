@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronan Mc Cormack - Senior Analytics Professional</title>
+    <title>Ronan McCormack - Senior Analytics Professional</title>
     <style>
         * {
             margin: 0;
@@ -12,34 +12,30 @@
         }
 
         body {
-            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #e4e4e7;
-            background-color: #0a0a0a;
-            font-weight: 300;
+            color: #333;
+            background-color: #ffffff;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         /* Header Section */
         .header {
-            background: #0a0a0a;
-            color: #ffffff;
-            padding: 100px 0 80px;
-            border-bottom: 1px solid #1f1f23;
+            background: #ffffff;
+            padding: 80px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .header-content {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 50px;
-            align-items: center;
+            gap: 60px;
+            align-items: start;
         }
 
         .profile-section {
@@ -47,91 +43,116 @@
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            background: #18181b;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 500;
-            border: 1px solid #27272a;
+            background: #f8f8f8;
+            margin: 0 auto;
             overflow: hidden;
+            border: 1px solid #f0f0f0;
         }
 
         .profile-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%;
         }
 
         .info-section h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
+            font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 8px;
-            letter-spacing: -0.02em;
-            color: #ffffff;
+            color: #111;
+            letter-spacing: -0.01em;
         }
 
         .title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 400;
-            color: #a1a1aa;
-            margin-bottom: 16px;
+            color: #666;
+            margin-bottom: 12px;
         }
 
         .location {
             font-size: 0.95rem;
-            color: #71717a;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            color: #888;
+            margin-bottom: 24px;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            max-width: 500px;
+            gap: 12px;
+            margin-bottom: 32px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 0.9rem;
-            color: #a1a1aa;
-        }
-
-        .contact-icon {
-            width: 16px;
-            text-align: center;
-            opacity: 0.7;
-            flex-shrink: 0;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: #666;
         }
 
         .contact-item a {
-            color: #a1a1aa;
+            color: #666;
             text-decoration: none;
             transition: color 0.2s ease;
         }
 
         .contact-item a:hover {
+            color: #111;
+        }
+
+        /* Hero CTA Buttons */
+        .hero-cta-buttons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-cta-button {
+            background: #ffffff;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-cta-button:hover {
+            background: #f8f8f8;
+            border-color: #333;
+        }
+
+        .hero-cta-button.primary {
+            background: #111;
             color: #ffffff;
+            border-color: #111;
         }
 
-        /* Main Content */
-        .main-content {
-            background: #0a0a0a;
+        .hero-cta-button.primary:hover {
+            background: #333;
+            border-color: #333;
         }
 
+        /* Buy Me a Coffee Button Wrapper */
+        .coffee-button-wrapper {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Section Styling */
         .section {
             padding: 80px 0;
-            border-bottom: 1px solid #1f1f23;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .section:last-child {
@@ -139,373 +160,269 @@
         }
 
         .section-title {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #ffffff;
-            margin-bottom: 40px;
-            position: relative;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 32px;
+            letter-spacing: -0.01em;
         }
 
-        /* Executive Summary */
+        /* Summary */
         .summary {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
-            color: #a1a1aa;
-            font-weight: 300;
+            color: #555;
             max-width: 800px;
         }
 
-        /* Skills Section */
-        .skills-container {
+        /* Two Column Layout */
+        .two-column-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: 380px 1fr;
+            gap: 60px;
+            padding: 80px 0;
         }
 
-        .skill-group {
-            background: #111111;
-            border: 1px solid #1f1f23;
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-group:hover {
-            border-color: #27272a;
-            background: #141414;
-        }
-
-        .skill-group h3 {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: #18181b;
-            border: 1px solid #27272a;
-            color: #e4e4e7;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            border-color: #3f3f46;
-            background: #1f1f23;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .project-card {
-            background: #111111;
-            border: 1px solid #1f1f23;
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            border-color: #27272a;
-            background: #141414;
-            transform: translateY(-2px);
-        }
-
-        .project-title {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 16px;
-            line-height: 1.4;
-        }
-
-        .project-description {
-            color: #a1a1aa;
-            margin-bottom: 24px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
-        .tech-badge {
-            background: #18181b;
-            color: #e4e4e7;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 400;
-            border: 1px solid #27272a;
-        }
-
-        .project-metrics {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #71717a;
-            font-size: 0.8rem;
-            font-weight: 400;
-        }
-
-        /* Experience Section */
-        .experience-list {
-            space-y: 40px;
-        }
-
+        /* Experience Cards */
         .experience-item {
-            border-left: 1px solid #27272a;
-            padding-left: 30px;
-            margin-bottom: 50px;
-            position: relative;
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
 
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -4px;
-            top: 8px;
-            width: 8px;
-            height: 8px;
-            background: #3f3f46;
-            border-radius: 50%;
-        }
-
-        .experience-header {
-            margin-bottom: 16px;
+        .experience-item:hover {
+            border-color: #d0d0d0;
+            background: #fafafa;
         }
 
         .job-title {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 4px;
         }
 
         .company-name {
-            font-size: 0.95rem;
-            font-weight: 400;
-            color: #a1a1aa;
+            font-size: 0.9rem;
+            color: #666;
             margin-bottom: 4px;
         }
 
         .job-duration {
             font-size: 0.85rem;
-            color: #71717a;
-            font-weight: 400;
+            color: #999;
         }
 
-        .job-description {
-            color: #a1a1aa;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
+        /* Education Cards */
         .education-card {
-            background: #111111;
-            border: 1px solid #1f1f23;
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .education-card:hover {
-            border-color: #27272a;
-            background: #141414;
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            padding: 24px;
+            margin-bottom: 16px;
         }
 
         .degree-title {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #ffffff;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 6px;
         }
 
         .institution {
             font-size: 0.9rem;
-            font-weight: 400;
-            color: #a1a1aa;
+            color: #666;
             margin-bottom: 4px;
         }
 
         .graduation-year {
             font-size: 0.85rem;
-            color: #71717a;
-            margin-bottom: 16px;
+            color: #999;
+            margin-bottom: 12px;
         }
 
         .education-details {
             font-size: 0.85rem;
-            color: #a1a1aa;
+            color: #666;
             line-height: 1.5;
-            font-weight: 300;
         }
 
-        /* Footer Section */
+        /* Project Cards */
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: all 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: #d0d0d0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111;
+            flex: 1;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .project-link {
+            width: 32px;
+            height: 32px;
+            background: #f8f8f8;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        .project-link:hover {
+            background: #f0f0f0;
+            border-color: #d0d0d0;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            background: #f8f8f8;
+            color: #666;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .project-metrics {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .project-status {
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .status-live {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status-completed {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        /* Footer */
         .footer {
-            background: #0a0a0a;
-            color: #ffffff;
-            padding: 80px 0;
-            border-top: 1px solid #1f1f23;
-        }
-
-        .footer-content {
+            background: #fafafa;
+            padding: 60px 0;
+            border-top: 1px solid #f0f0f0;
             text-align: center;
         }
 
         .footer h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 16px;
-            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #111;
         }
 
         .footer p {
-            font-size: 1rem;
-            color: #a1a1aa;
-            margin-bottom: 40px;
+            font-size: 0.95rem;
+            color: #666;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            background: #18181b;
-            color: #ffffff;
-            border: 1px solid #27272a;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 400;
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .cta-button:hover {
-            background: #1f1f23;
-            border-color: #3f3f46;
-            transform: translateY(-1px);
-        }
-
-        .cta-button.primary {
-            background: #ffffff;
-            color: #0a0a0a;
-            border-color: #ffffff;
-        }
-
-        .cta-button.primary:hover {
-            background: #e4e4e7;
-            border-color: #e4e4e7;
+            margin: 0 auto;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
                 text-align: center;
-                gap: 40px;
             }
 
-            .contact-info {
+            .profile-section {
                 margin: 0 auto;
             }
 
-            .section {
-                padding: 60px 0;
+            .contact-info {
+                align-items: center;
+            }
+
+            .hero-cta-buttons {
+                justify-content: center;
+            }
+
+            .two-column-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .info-section h1 {
-                font-size: 2rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+                font-size: 1.6rem;
             }
         }
 
-        /* Subtle animations */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Scrollbar styling */
+        /* Clean scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #0a0a0a;
+            background: #fafafa;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #27272a;
+            background: #ddd;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
+            background: #ccc;
         }
     </style>
 </head>
@@ -516,28 +433,43 @@
             <div class="header-content">
                 <div class="profile-section">
                     <div class="profile-img">
-                        <img src="images/Ronan-McCormack.png" alt="Ronan McCormack Profile Photo">
+                        <img src="images/Ronan-McCormack.png" alt="Ronan McCormack">
                     </div>
                 </div>
                 <div class="info-section">
-                    <h1>Ronan Mc Cormack, MSc</h1>
+                    <h1>Ronan McCormack, MSc</h1>
                     <div class="title">Senior Analytics & Data Science Professional</div>
-                    <div class="location">
-                        <span class="contact-icon">📍</span>
-                        Vancouver, British Columbia, Canada
-                    </div>
+                    <div class="location">Vancouver, British Columbia, Canada</div>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="contact-icon">✉</span>
+                            <span>✉</span>
                             <a href="mailto:ronanmccormack@live.com">ronanmccormack@live.com</a>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">⚡</span>
-                            <a href="https://linkedin.com/in/ronan-mccormack/" target="_blank">linkedin.com/in/ronan-mccormack/</a>
+                            <span>↗</span>
+                            <a href="https://linkedin.com/in/ronan-mccormack/" target="_blank">linkedin.com/in/ronan-mccormack</a>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">◦</span>
-                            <span>Available for Contract/FTE</span>
+                            <span style="color: #22c55e;">●</span>
+                            <span style="color: #22c55e; font-weight: 500;">Available for Contract/FTE</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero CTA Buttons -->
+                    <div class="hero-cta-buttons">
+                        <a href="mailto:ronanmccormack@live.com" class="hero-cta-button primary">
+                            Get In Touch
+                        </a>
+                        <a href="#" class="hero-cta-button" download>
+                            Download Resume
+                        </a>
+                        <a href="https://linkedin.com/in/ronan-mccormack" class="hero-cta-button" target="_blank">
+                            LinkedIn Profile
+                        </a>
+                        <div class="coffee-button-wrapper">
+                            <a href="https://www.buymeacoffee.com/ronanmccormack" class="hero-cta-button" target="_blank">
+                                Buy Me a Coffee
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -545,331 +477,212 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Executive Summary -->
     <div class="container">
-        <div class="main-content">
-            <!-- Executive Summary -->
-            <section class="section">
-                <h2 class="section-title">Executive Summary</h2>
-                <p class="summary">
-                    Senior Analytics Professional with 10 years of experience transforming complex datasets into actionable business insights. Proven expertise in statistical modeling, predictive analytics, and data visualization, with a track record of delivering measurable impact for public and private organizations. Specializes in Python, R, SQL, and advanced analytics platforms, with deep experience in governance frameworks, asset management optimization, and executive reporting for data-driven decision making.
-                </p>
-            </section>
+        <section class="section">
+            <h2 class="section-title">Executive Summary</h2>
+            <p class="summary">
+                Senior Analytics Professional with 10 years of experience transforming complex datasets into actionable business insights. Proven expertise in statistical modeling, predictive analytics, and data visualization, with a track record of delivering measurable impact for public and private organizations. Specializes in Python, R, SQL, and advanced analytics platforms.
+            </p>
+        </section>
+    </div>
 
-            <!-- Core Technical Competencies -->
-            <section class="section">
-                <h2 class="section-title">Analytics & Data Science Expertise</h2>
-                <div class="skills-container">
-                    <div class="skill-group">
-                        <h3>
-                            <span>▲</span>
-                            Statistical Analysis & Modeling
-                        </h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">Statistical Modeling</span>
-                            <span class="skill-tag">Predictive Analytics</span>
-                            <span class="skill-tag">Time Series Analysis</span>
-                            <span class="skill-tag">Regression Analysis</span>
+    <!-- Two Column Layout -->
+    <div class="container">
+        <div class="two-column-layout">
+            <!-- Left Column -->
+            <div class="left-column">
+                <section>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <div class="job-title">IT Governance & Reporting Specialist</div>
+                            <div class="company-name">TransLink</div>
+                            <div class="job-duration">Sep 2023 - Present</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">IT Asset Management Specialist</div>
+                            <div class="company-name">TransLink</div>
+                            <div class="job-duration">May 2022 - Sep 2023</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">IT Administrator</div>
+                            <div class="company-name">TransLink</div>
+                            <div class="job-duration">Nov 2020 - May 2022</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">Computer Support Analyst</div>
+                            <div class="company-name">TransLink</div>
+                            <div class="job-duration">Nov 2019 - Nov 2020</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">Technical Support Specialist</div>
+                            <div class="company-name">Quicktech</div>
+                            <div class="job-duration">May 2018 - Nov 2019</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">Systems Engineer</div>
+                            <div class="company-name">CBE Ltd</div>
+                            <div class="job-duration">May 2017 - May 2018</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="job-title">Systems Administrator</div>
+                            <div class="company-name">Rocket Science Ltd</div>
+                            <div class="job-duration">Nov 2015 - May 2017</div>
                         </div>
                     </div>
-                    <div class="skill-group">
-                        <h3>
-                            <span>◆</span>
-                            Data Management & ETL
-                        </h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Oracle</span>
-                            <span class="skill-tag">Data Warehousing</span>
-                            <span class="skill-tag">ETL Pipelines</span>
-                            <span class="skill-tag">Data Quality</span>
-                        </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>
-                            <span>■</span>
-                            Visualization & BI Tools
-                        </h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Power BI</span>
-                            <span class="skill-tag">Tableau</span>
-                            <span class="skill-tag">Excel</span>
-                            <span class="skill-tag">Matplotlib</span>
-                            <span class="skill-tag">ggplot2</span>
-                            <span class="skill-tag">Plotly</span>
-                        </div>
-                    </div>
-                    <div class="skill-group">
-                        <h3>
-                            <span>●</span>
-                            Machine Learning & AI
-                        </h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">Classification</span>
-                            <span class="skill-tag">Clustering</span>
-                            <span class="skill-tag">Neural Networks</span>
-                            <span class="skill-tag">Feature Engineering</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Key Analytics Projects -->
-            <section class="section">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3 class="project-title">Professional IT Support Website Build</h3>
-                        <p class="project-description">
-                            Developed and deployed a fully responsive static website using HTML, CSS, and JavaScript, hosted on GitHub Pages with custom domain configuration. Integrated EmailJS API for seamless contact form functionality, enabling automated lead capture and email notifications without backend infrastructure.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">GitHub Pages</span>
-                            <span class="tech-badge">Custom Domain</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>—</span>
-                            80% Annual Savings
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">IT Governance Power BI Dashboard & KPI Framework</h3>
-                        <p class="project-description">
-                            Built executive-level IT governance reporting system tracking 45+ KPIs across IT operations, Cybersecurity, and IT Project Delivery. Automated monthly executive reports and implemented real-time monitoring dashboards that improved decision-making speed by 60%.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Power BI</span>
-                            <span class="tech-badge">SQL Server</span>
-                            <span class="tech-badge">Power Apps</span>
-                            <span class="tech-badge">Executive Reporting</span>
-                            <span class="tech-badge">KPI Development</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>—</span>
-                            45+ KPIs • 60% Faster Decision Making
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">Vancouver Property Assessment Analytics</h3>
-                        <p class="project-description">
-                            Engineered comprehensive property valuation analysis system using City of Vancouver open data, processing 250K+ property records. Developed interactive web application with predictive pricing models achieving 94% accuracy for residential properties.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">Machine Learning</span>
-                            <span class="tech-badge">Data Visualization</span>
-                            <span class="tech-badge">Web Development</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>—</span>
-                            250K+ Records • 94% Prediction Accuracy
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">Crop Yield Prediction Using Machine Learning (LSTM)</h3>
-                        <p class="project-description">
-                            Developed an advanced agricultural analytics system using Long Short-Term Memory (LSTM) neural networks to predict crop yields based on historical weather patterns, soil conditions, and seasonal data. Implemented deep learning models in Python using TensorFlow/Keras.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">TensorFlow</span>
-                            <span class="tech-badge">Keras</span>
-                            <span class="tech-badge">Pandas</span>
-                            <span class="tech-badge">NumPy</span>
-                        </div>
-                        <div class="project-metrics">
-                            <span>—</span>
-                            87% prediction accuracy • Masters thesis component
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section class="section">
-                <h2 class="section-title">Education & Certifications</h2>
-                <div class="education-grid">
+                <section style="margin-top: 40px;">
+                    <h2 class="section-title">Education</h2>
                     <div class="education-card">
                         <div class="degree-title">Master of Science in Data Science</div>
-                        <div class="institution">Atlantic Technological University, Sligo</div>
+                        <div class="institution">Atlantic Technological University</div>
                         <div class="graduation-year">2023</div>
                         <div class="education-details">
-                            Specialized in advanced statistical computing, machine learning algorithms, and data mining techniques. Completed thesis on predictive analytics applications in transportation systems. Dean's List recognition for academic excellence.
+                            Specialized in advanced statistical computing, machine learning, and predictive analytics.
                         </div>
                     </div>
                     <div class="education-card">
-                        <div class="degree-title">Bachelor of Science in Computer Systems & Networking</div>
+                        <div class="degree-title">BSc Computer Systems & Networking</div>
                         <div class="institution">Institute of Technology, Sligo</div>
                         <div class="graduation-year">2017</div>
                         <div class="education-details">
-                            Comprehensive foundation in computer science, systems administration, and network infrastructure. Strong emphasis on database design, programming fundamentals, and system optimization. Graduated with honors.
+                            Foundation in computer science, systems administration, and network infrastructure.
                         </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Professional IT Support Website</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="View Live">↗</a>
+                            <a href="#" class="project-link" title="Source">{ }</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Developed and deployed a fully responsive static website using HTML, CSS, and JavaScript. Hosted on GitHub Pages with custom domain configuration and integrated EmailJS API for contact functionality.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">GitHub Pages</span>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-metrics">80% Annual Cost Savings</div>
+                        <div class="project-status status-live">Live</div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Professional Experience -->
-            <section class="section">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="experience-list">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">IT Governance & Reporting Specialist</div>
-                            <div class="company-name">TransLink • New Westminster, BC</div>
-                            <div class="job-duration">September 2023 - Present</div>
-                        </div>
-                        <div class="job-description">
-                            Leading enterprise IT analytics and governance reporting initiatives for BC's regional transportation authority. Developing executive Power BI dashboards, KPI frameworks, and predictive models while ensuring compliance with government reporting standards and data governance policies.
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">IT Governance Dashboard & KPI Framework</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="Dashboard">📊</a>
+                            <a href="#" class="project-link" title="Documentation">📄</a>
                         </div>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">IT Asset Management Specialist</div>
-                            <div class="company-name">TransLink • New Westminster, BC</div>
-                            <div class="job-duration">May 2022 - September 2023</div>
-                        </div>
-                        <div class="job-description">
-                            Managed comprehensive IT asset lifecycle including hardware procurement, deployment, tracking, and disposal across 1,800+ fleet vehicles and facilities. Maintained asset databases, conducted audits, and coordinated warranty management. Developed standardized deployment processes and asset tracking systems that improved inventory accuracy by 95% and reduced procurement costs.
-                        </div>
+                    <p class="project-description">
+                        Built executive-level IT governance reporting system tracking 45+ KPIs across IT operations, Cybersecurity, and IT Project Delivery. Automated monthly executive reports with real-time monitoring dashboards.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">SQL Server</span>
+                        <span class="tech-badge">Power Apps</span>
+                        <span class="tech-badge">KPI Development</span>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">IT Administrator</div>
-                            <div class="company-name">TransLink • New Westminster, BC</div>
-                            <div class="job-duration">November 2020 - May 2022</div>
-                        </div>
-                        <div class="job-description">
-                            Managed enterprise data systems while developing analytical capabilities for operational decision-making. Created automated reporting solutions, performed statistical analysis of system performance metrics, and built data quality monitoring frameworks. Established foundation for organization-wide analytics initiatives.
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">Computer Support Analyst</div>
-                            <div class="company-name">TransLink • New Westminster, BC</div>
-                            <div class="job-duration">November 2019 - November 2020</div>
-                        </div>
-                        <div class="job-description">
-                            Delivered comprehensive technical support for desktop, mobile, and enterprise applications across a multi-site transportation network. Resolved hardware/software issues, managed IT asset inventory, and maintained help desk ticketing systems. Improved first-call resolution rates by 25% through systematic troubleshooting processes and knowledge base development.
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">Technical Support Specialist</div>
-                            <div class="company-name">Quicktech • Vancouver, BC</div>
-                            <div class="job-duration">May 2018 - November 2019</div>
-                        </div>
-                        <div class="job-description">
-                            Provided managed IT support services for 15+ small-to-medium business clients. Handled network troubleshooting, server maintenance, backup solutions, and cybersecurity implementations. Managed client relationships and delivered on-site/remote technical support that improved client system uptime by 20% and reduced support tickets.
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">Systems Engineer</div>
-                            <div class="company-name">CBE Ltd • Mayo, Ireland</div>
-                            <div class="job-duration">May 2017 - May 2018</div>
-                        </div>
-                        <div class="job-description">
-                            Provided specialized technical support for point-of-sale systems across retail and hospitality clients. Configured POS terminals, payment processing systems, and integrated inventory management solutions. Delivered on-site troubleshooting, system installations, and staff training that maintained 99% system uptime during peak business periods and reduced transaction processing issues by 30%.
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="job-title">Systems Administrator</div>
-                            <div class="company-name">Rocket Science Ltd • Sligo, Ireland</div>
-                            <div class="job-duration">November 2015 - May 2017</div>
-                        </div>
-                        <div class="job-description">
-                            Administered Windows/Linux server environments, network infrastructure, and backup systems for multiple client environments. Managed security patches, system updates, and disaster recovery procedures. Implemented automated monitoring tools and preventive maintenance schedules that reduced client system downtime by 40%.
-                        </div>
+                    <div class="project-footer">
+                        <div class="project-metrics">45+ KPIs • 60% Faster Decisions</div>
+                        <div class="project-status status-live">Production</div>
                     </div>
                 </div>
-            </section>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Vancouver Property Assessment Analytics</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="Demo">↗</a>
+                            <a href="#" class="project-link" title="GitHub">{ }</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Engineered property valuation analysis system using City of Vancouver open data. Processed 250K+ property records with predictive pricing models achieving 94% accuracy through machine learning algorithms.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Data Visualization</span>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-metrics">250K+ Records • 94% Accuracy</div>
+                        <div class="project-status status-completed">Completed</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Crop Yield Prediction Using LSTM Networks</h3>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="Paper">📄</a>
+                            <a href="#" class="project-link" title="Code">{ }</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Developed agricultural analytics system using Long Short-Term Memory neural networks to predict crop yields based on weather patterns, soil conditions, and seasonal data. Implemented deep learning models with TensorFlow/Keras.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">Keras</span>
+                        <span class="tech-badge">LSTM</span>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-metrics">87% Accuracy • Masters Thesis</div>
+                        <div class="project-status status-completed">Academic</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <h2>Ready to Transform Your Data into Insights</h2>
-                <p>
-                    Available for analytics consulting, data science projects, and strategic advisory roles across Vancouver and remotely throughout North America.
-                </p>
-                <div class="cta-buttons">
-                    <a href="mailto:ronanmccormack@live.com" class="cta-button primary">
-                        <span>✉</span>
-                        Get In Touch
-                    </a>
-                    <a href="https://linkedin.com/in/ronan-mccormack" class="cta-button" target="_blank">
-                        <span>⚡</span>
-                        LinkedIn Profile
-                    </a>
-                </div>
-            </div>
+            <h2>Ready to Transform Your Data into Insights</h2>
+            <p>
+                Available for analytics consulting, data science projects, and strategic advisory roles across Vancouver and remotely throughout North America.
+            </p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer for fade-in animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe sections for subtle animations
-            document.querySelectorAll('.section, .project-card, .education-card').forEach(el => {
-                observer.observe(el);
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
 
-            // Smooth scrolling for any anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Add subtle hover effects to skill tags
-            document.querySelectorAll('.skill-tag').forEach(tag => {
-                tag.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.02)';
-                });
-                tag.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
+        // Add subtle hover effects to cards
+        document.querySelectorAll('.experience-item, .project-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Add your modal or detail view logic here if needed
+                console.log('Card clicked:', this);
             });
         });
     </script>
