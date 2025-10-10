@@ -1,0 +1,155 @@
+{
+  "profile": {
+    "name": "Ronan McCormack, MSc",
+    "title": "Senior Analytics & Data Professional",
+    "location": "Vancouver, British Columbia, Canada",
+    "email": "ronanmccormack@live.com",
+    "linkedin": "https://linkedin.com/in/ronan-mccormack/",
+    "resumePath": "resume/RonanMcCormack_Resume.pdf",
+    "buyMeCoffee": "https://www.buymeacoffee.com/ronanmccormack",
+    "profileImage": "images/Ronan-McCormack.png",
+    "availability": {
+      "status": true,
+      "text": "Available for Contract Work"
+    },
+    "summary": "Senior Analytics Professional with 10 years of experience transforming complex datasets into actionable business insights. Proven expertise in statistical modeling, predictive analytics, and data visualization, with a track record of delivering measurable impact for public and private organizations. Specializes in Python, R, SQL, and advanced analytics platforms."
+  },
+  "experience": [
+    {
+      "id": "governance",
+      "title": "IT Governance & Reporting Specialist",
+      "company": "TransLink",
+      "location": "New Westminster, BC",
+      "duration": "Sep 2023 - Present",
+      "years": 2.1,
+      "description": "Leading enterprise IT analytics and governance reporting initiatives for BC's regional transportation authority. Developing executive Power BI dashboards, KPI frameworks, and predictive models while ensuring compliance with government reporting standards and data governance policies.",
+      "skills": ["Power BI", "KPI Development", "Predictive Analytics", "Data Governance", "Executive Reporting", "SQL", "Python", "Compliance Management"]
+    },
+    {
+      "id": "asset",
+      "title": "IT Asset Management Specialist",
+      "company": "TransLink",
+      "location": "New Westminster, BC",
+      "duration": "May 2022 - Sep 2023",
+      "years": 1.3,
+      "description": "Managed comprehensive IT asset lifecycle including hardware procurement, deployment, tracking, and disposal across 1,800+ fleet vehicles and facilities. Developed standardized deployment processes and asset tracking systems that improved inventory accuracy by 95%.",
+      "skills": ["Asset Management", "Inventory Management", "Process Optimization", "Data Analysis", "Excel", "Procurement", "Lifecycle Management"]
+    },
+    {
+      "id": "admin",
+      "title": "IT Administrator",
+      "company": "TransLink",
+      "location": "New Westminster, BC",
+      "duration": "Nov 2020 - May 2022",
+      "years": 1.5,
+      "description": "Managed enterprise data systems while developing analytical capabilities for operational decision-making. Created automated reporting solutions and built data quality monitoring frameworks.",
+      "skills": ["System Administration", "Data Quality", "Automated Reporting", "SQL", "Python", "Data Integration", "Business Intelligence"]
+    },
+    {
+      "id": "support",
+      "title": "Computer Support Analyst",
+      "company": "TransLink",
+      "location": "New Westminster, BC",
+      "duration": "Nov 2019 - Nov 2020",
+      "years": 1.0,
+      "description": "Delivered comprehensive technical support for desktop, mobile, and enterprise applications across a multi-site transportation network. Improved first-call resolution rates by 25%.",
+      "skills": ["Technical Support", "Troubleshooting", "Windows", "Mobile Support", "Active Directory", "ServiceNow", "Customer Service"]
+    },
+    {
+      "id": "technical",
+      "title": "Technical Support Specialist",
+      "company": "Quicktech",
+      "location": "Vancouver, BC",
+      "duration": "May 2018 - Nov 2019",
+      "years": 1.5,
+      "description": "Provided managed IT support services for 15+ small-to-medium business clients. Improved client system uptime by 20% through proactive monitoring and preventive maintenance.",
+      "skills": ["Managed IT Services", "Monitoring", "Preventive Maintenance", "Client Relations", "Network Troubleshooting", "Windows Server", "Backup Solutions"]
+    },
+    {
+      "id": "engineer",
+      "title": "Systems Engineer",
+      "company": "CBE Ltd",
+      "location": "Mayo, Ireland",
+      "duration": "May 2017 - May 2018",
+      "years": 1.0,
+      "description": "Provided specialized technical support for point-of-sale systems across retail and hospitality clients. Maintained 99% system uptime during peak business periods.",
+      "skills": ["POS Systems", "Retail Technology", "System Maintenance", "Technical Support", "Database Management", "Client Support"]
+    },
+    {
+      "id": "sysadmin",
+      "title": "Systems Administrator",
+      "company": "Rocket Science Ltd",
+      "location": "Sligo, Ireland",
+      "duration": "Nov 2015 - May 2017",
+      "years": 1.5,
+      "description": "Administered Windows/Linux server environments, network infrastructure, and backup systems. Reduced client system downtime by 40% through automated monitoring and preventive maintenance.",
+      "skills": ["Windows Server", "Linux", "Network Administration", "Backup Systems", "Automation", "Monitoring", "Infrastructure Management"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in Data Science",
+      "institution": "Atlantic Technological University",
+      "location": "Sligo, Ireland",
+      "year": "2023",
+      "details": "Specialized in advanced statistical computing, machine learning, and predictive analytics."
+    },
+    {
+      "degree": "BSc Computer Systems & Networking",
+      "institution": "Institute of Technology, Sligo",
+      "location": "Sligo, Ireland",
+      "year": "2017",
+      "details": "Foundation in computer science, systems administration, and network infrastructure."
+    }
+  ],
+  "projects": [
+  {
+      "title": "TeeSheets.ca - Golf Tee Time Search & Alerts",
+      "description": "Built and deployed a fully responsive web platform that allows golfers to search available tee times across multiple courses and receive real-time email alerts when desired slots open. Implemented an intuitive UI, custom domain configuration, and integrated EmailJS for automated notifications and contact handling.",
+      "technologies": ["HTML", "CSS", "JavaScript", "GitHub Pages", "EmailJS"],
+      "metrics": "Reduced manual tee time checking by 90%",
+      "status": "Live",
+      "links": {
+          "live": "https://www.teesheets.ca",
+          "github": "#"
+      }
+      },
+  {
+      "title": "EasyDoesIT.ca - Professional IT Support & Consultation",
+      "description": "Built a website for Easy Does IT, a Vancouver-based IT support business focused on serving individuals and small businesses. The site showcases services like hardware procurement, setup & installation, user training, system maintenance, and professional consultation. Includes a quote form, about & contact pages, service descriptions, and trust signals.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design", "Contact / Quote Form Integration"],
+      "metrics": "Increased quote requests by 50% after launch.",
+      "status": "Live",
+      "links": {
+          "live": "https://www.easydoesit.ca",
+          "github": "#"
+      }
+      },
+    {
+      "title": "Vancouver Property Assessment Analytics",
+      "description": "Engineered property valuation analysis system using City of Vancouver open data. Processed 250K+ property records with predictive pricing models achieving 94% accuracy through machine learning algorithms.",
+      "technologies": ["Python", "Flask", "Machine Learning", "Data Visualization"],
+      "metrics": "250K+ Records • 94% Accuracy",
+      "status": "Completed",
+      "links": {
+        "demo": "https://www.areacheck.ca",
+        "github": "#"
+      }
+    },
+    {
+      "title": "Crop Yield Prediction Using LSTM Networks",
+      "description": "Developed agricultural analytics system using Long Short-Term Memory neural networks to predict crop yields based on weather patterns, soil conditions, and seasonal data. Implemented deep learning models with TensorFlow/Keras.",
+      "technologies": ["Python", "TensorFlow", "Keras", "LSTM"],
+      "metrics": "87% Accuracy • Masters Thesis",
+      "status": "Academic",
+      "links": {
+        "paper": "#",
+        "github": "#"
+      }
+    }
+  ],
+  "footer": {
+    "heading": "Ready to Transform Your Data into Insights",
+    "subtext": "Available for analytics consulting, data science projects, and strategic advisory roles across Vancouver and remotely throughout North America."
+  }
+}
