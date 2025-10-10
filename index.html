@@ -565,10 +565,10 @@
     
             /* Education */
             .education-card {
-                background: linear-gradient(135deg, #1a1a1a, #000000);
+                background: linear-gradient(135deg, #fff, #fff);
                 padding: 24px;
                 border-radius: 12px;
-                color: white;
+                color: black;
                 position: relative;
                 overflow: hidden;
                 margin-bottom: 16px;
@@ -609,7 +609,8 @@
     
             .education-year {
                 display: inline-block;
-                background: rgba(255, 255, 255, 0.15);
+                color: white;
+                background: rgb(0, 0, 0);
                 padding: 3px 10px;
                 border-radius: 12px;
                 font-weight: 600;
@@ -1021,6 +1022,22 @@
     
                                 <!-- Right Column: Projects & Education -->
                                 <div class="right-column">
+
+                                    <!-- Education -->
+                                    <div class="right-column-section">
+                                        <h3 class="column-title">Education</h3>
+                                        ${education.map(edu => `
+                                            <div class="education-card">
+                                                <div class="education-content">
+                                                    <div class="education-degree">${edu.degree}</div>
+                                                    <div class="education-institution">${edu.institution}</div>
+                                                    <div class="education-year">${edu.year}</div>
+                                                    <p class="education-details">${edu.details}</p>
+                                                </div>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+
                                     <!-- Projects -->
                                     <div class="right-column-section">
                                         <h3 class="column-title">Featured Projects</h3>
@@ -1051,21 +1068,6 @@
                                                             `).join('')}
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        `).join('')}
-                                    </div>
-    
-                                    <!-- Education -->
-                                    <div class="right-column-section">
-                                        <h3 class="column-title">Education</h3>
-                                        ${education.map(edu => `
-                                            <div class="education-card">
-                                                <div class="education-content">
-                                                    <div class="education-degree">${edu.degree}</div>
-                                                    <div class="education-institution">${edu.institution}</div>
-                                                    <div class="education-year">${edu.year}</div>
-                                                    <p class="education-details">${edu.details}</p>
                                                 </div>
                                             </div>
                                         `).join('')}

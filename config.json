@@ -137,6 +137,17 @@
       }
     },
     {
+      "title": "Manille Auto Website",
+      "description": "Built a website for Manille Auto, a Vancouver-based Japanese car import service helping Canadians purchase vehicles from Japan. The site showcases their end-to-end import services including export documentation, customs clearance, RIV registration, transportation logistics, and door-to-door delivery across Canada. Features service breakdown, import process steps, contact form, and trust-building elements.",
+      "technologies": ["HTML", "CSS", "GitHub Pages", "Responsive Design", "EmailJS"],
+      "metrics": "Full Import Service • Canada-Wide Delivery",
+      "status": "Completed",
+      "links": {
+        "demo": "https://www.manilleauto.com",
+        "github": "#"
+      }
+    },
+    {
       "title": "Crop Yield Prediction Using LSTM Networks",
       "description": "Developed agricultural analytics system using Long Short-Term Memory neural networks to predict crop yields based on weather patterns, soil conditions, and seasonal data. Implemented deep learning models with TensorFlow/Keras.",
       "technologies": ["Python", "TensorFlow", "Keras", "LSTM"],
